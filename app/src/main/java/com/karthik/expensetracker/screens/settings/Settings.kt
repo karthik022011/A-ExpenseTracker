@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.karthik.expensetracker.bottomnavigation.ScreenRoute
 import com.karthik.expensetracker.utils.commoncomposables.MyTextButton
 
 @Composable
@@ -24,6 +25,7 @@ fun SettingsScreen(navController: NavController) {
             ) {
                 MyTextButton("Category"){
                     //navigate to category screen
+                    navController.navigate(ScreenRoute.Category.route)
                 }
             }
         }

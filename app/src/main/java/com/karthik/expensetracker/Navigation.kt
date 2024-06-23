@@ -13,6 +13,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.karthik.expensetracker.bottomnavigation.BottomNavigationItem
 import com.karthik.expensetracker.bottomnavigation.ScreenRoute
+import com.karthik.expensetracker.screens.category.CategoryScreen
 import com.karthik.expensetracker.screens.home.HomeScreen
 import com.karthik.expensetracker.screens.settings.SettingsScreen
 import com.karthik.expensetracker.screens.transactions.TransactionScreen
@@ -69,6 +70,11 @@ fun BottomNavigationBar() {
             }
             composable(ScreenRoute.Settings.route) {
                 SettingsScreen(
+                    navController
+                )
+            }
+            composable(ScreenRoute.Category.route) {
+                CategoryScreen(
                     navController
                 )
             }
