@@ -1,6 +1,5 @@
 package com.karthik.expensetracker.screens.home
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -8,11 +7,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.karthik.expensetracker.R
+import com.karthik.expensetracker.utils.commoncomposables.toolbar.CustomToolbarScreen
 
 @Composable
 fun HomeScreen(navController: NavController) {
@@ -21,7 +18,9 @@ fun HomeScreen(navController: NavController) {
             color = MaterialTheme.colorScheme.background
         ) {
             Column(
-                modifier = Modifier.fillMaxSize().padding(15.dp),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(15.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {

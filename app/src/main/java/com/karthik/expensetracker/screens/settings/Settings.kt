@@ -1,6 +1,5 @@
-package com.karthik.expensetracker.screens.transactions
+package com.karthik.expensetracker.screens.settings
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -10,10 +9,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.karthik.expensetracker.R
+import com.karthik.expensetracker.utils.commoncomposables.MyTextButton
 
 @Composable
-fun TransactionScreen(navController: NavController) {
+fun SettingsScreen(navController: NavController) {
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
@@ -23,11 +22,9 @@ fun TransactionScreen(navController: NavController) {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                Text(
-                    "Home Screen",
-                    style = MaterialTheme.typography.titleLarge,
-                    modifier = Modifier.padding(vertical = 20.dp)
-                )
+                MyTextButton("Category"){
+                    //navigate to category screen
+                }
             }
         }
 }
